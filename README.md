@@ -11,4 +11,4 @@ The lab’s public website. The pages in `docs/` are standalone HTML and need no
 
 ## Cloudflare Web Analytics
 
-Register `alcaldelab.org` under Cloudflare **Web Analytics → Add a site**. From the site's JavaScript snippet, copy the public beacon token into `siteToken` in `docs/assets/analytics.js`. Do **not** use an API token or account credentials. The shared script is included on every page. It sends no data until configured, and excludes previews, localhost, and the GitHub Pages test hostname. On the live custom domain, check the browser Network tab for the Cloudflare beacon and confirm a visit reaches the Cloudflare dashboard.
+The Cloudflare Web Analytics public beacon token is configured in `docs/assets/analytics.js`. Every page includes this shared script. It runs only on `alcaldelab.org` and `www.alcaldelab.org`; previews, localhost, and the GitHub Pages test hostname do not contribute traffic. On the live custom domain, check the browser Network tab for the Cloudflare beacon and confirm a visit reaches the Cloudflare dashboard. Never put an API token or account credentials here.
